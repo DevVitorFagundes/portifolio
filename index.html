@@ -8,20 +8,26 @@
 </head>
 <body>
     <header>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#Projeto">Projetos</a>
-            </li>
-            <li>
-                <a href="#sobre">Sobre</a>
-            </li>
-            <li>
-                <a href="#contato">Contato</a>
-            </li>
-        </ul>
+        <div class="menu-burger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#Projeto">Projetos</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        
     </header>
 
     <section class="principal">
@@ -29,14 +35,14 @@
 
            <h1>Olá, eu sou <span>Vitor Fagundes</span>.</h1>
            <p> Desenvolvedor Full Stack</p>
-           <a href="#Projeto" class="botao efeito-cursor">Ver Projetos</a>
+           <a href="#Projeto" class="botao-efeito-cursor">Ver Projetos</a>
         </div>
         <div class="foto-container">
             <img class="img-sobre" src="img/profile-pic.png">
         </div>
     </section>
 
-    <section id="Projeto">
+    <section id="projeto">
         <h2 class="titulo-secao">Projetos</h2>
 
         <div class="grade-projetos">
@@ -132,6 +138,15 @@
     </footer>
 
     <div class="cursor"></div>
+
+    <script>
+        const menuBurger = document.querySelector('.menu-burger');
+        const navLinks = document.querySelector('.nav-links ul');
+    
+        menuBurger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
     
 </body>
 <script>
