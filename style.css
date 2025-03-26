@@ -16,11 +16,17 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    background-color: #0a0a0a; 
+    padding: 20px 0; 
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
-    padding: 30px;
-    margin-left: 50px;
+    z-index: 1000; 
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); 
 }
 
 header a {
@@ -107,7 +113,7 @@ ul {
     z-index: 1;
 }
 
-.botao {
+.botao-efeito-cursor {
     display: inline-block;
     padding: 15px 30px;
     background-color: #2aa344;
@@ -197,12 +203,8 @@ ul {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    max-width: 1300px;
-    padding: 0 20px;
-    margin-top: 50px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .img-sobre {
@@ -243,7 +245,7 @@ ul {
     gap: 20px;
     justify-content: center;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 40px;
 }
 
 .botao-contato {
@@ -277,7 +279,7 @@ footer {
     padding: 20px 5%;
     text-align: center;
     border-top: 1px solid #222;
-}
+  }
 
 .efeito-cursor {
     cursor: pointer;
@@ -421,10 +423,12 @@ img {
     }
 
     .botoes-contato {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
     }
-
+    
     .botao-contato {
         width: 100%;
         text-align: center;
