@@ -463,3 +463,9 @@ img {
         padding: 0 10px;
     }
 }
+
+#projeto,
+#sobre,
+#contato {
+    scroll-margin-top: 100px; /* Ajuste esse valor conforme a altura do header */
+}
